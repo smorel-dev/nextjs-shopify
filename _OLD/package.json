@@ -1,7 +1,10 @@
 {
-  "name": "nextjs-shopify",
-  "version": "1.0.0",
   "private": true,
+  "packageManager": "pnpm@8.2.0",
+  "engines": {
+    "node": ">=18",
+    "pnpm": ">=7"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -11,6 +14,9 @@
     "prettier": "prettier --write --ignore-unknown .",
     "prettier:check": "prettier --check --ignore-unknown .",
     "test": "pnpm lint && pnpm prettier:check"
+  },
+  "git": {
+    "pre-commit": "lint-staged"
   },
   "lint-staged": {
     "*": "prettier --write --ignore-unknown"
